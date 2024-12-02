@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Product, Order, Customer
+from .models import Product, Order, Customer, Delivery
 
 # Homepage View
 def homepage(request):
@@ -41,3 +41,20 @@ def admin_dashboard(request):
 def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     return render(request, 'product_detail.html', {'product': product})
+
+def order_detail(request, order_id):
+    order = get_object_or_404(Order, id=order_id)
+    delivery = get_object_or_404(Delivery, order=order)  # Assuming a one-to-one relationship between Order and Delivery
+
+    return render(request, 'order_detail.html', {
+        'order': order,
+        'delivery': delivery,
+    })
+
+def delivery_detail(request, order_id):
+    # Fetch the delivery object using the associated order ID
+    delivery = get_object_or_404(Delivery, order_id=order_id)
+    return render(request, 'delivery_detail.html', {'delivery': delivery})
+
+def admin_dashboard(request):
+    return render(request, 'admin_dashboard.html')
