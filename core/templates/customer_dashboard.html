@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +11,9 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">OneOne</a>
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'images/logo.png' %}" alt="OneOne Logo" height="50">
+            </a> 
         </nav>
     </header>
     <main>
@@ -29,9 +33,13 @@
                     {% for order in orders %}
                     <tr>
                         <td>{{ order.id }}</td>
-                        <td>{{ order.product.name }}</td>
+                        <td>
+                            <a href="{% url 'product_detail' order.product.id %}">
+                                {{ order.product.name }}
+                            </a>
+                        </td>
                         <td>{{ order.status }}</td>
-                        <td>{{ order.order_date }}</td>
+                        <td>{{ order.order_date|date:"M. d, Y" }}</td>
                     </tr>
                     {% endfor %}
                 </tbody>

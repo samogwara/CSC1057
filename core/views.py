@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Product, Order, Customer
 
 # Homepage View
@@ -37,3 +37,7 @@ def admin_dashboard(request):
         'products': products,
         'orders': orders
     })
+
+def product_detail(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    return render(request, 'product_detail.html', {'product': product})
