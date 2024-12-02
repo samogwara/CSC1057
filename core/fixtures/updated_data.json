@@ -1,0 +1,104 @@
+[
+    {
+        "model": "core.customer",
+        "pk": 1,
+        "fields": {
+            "name": "John Doe",
+            "email": "john.doe@example.com",
+            "address": "123 Main St, Anytown, USA",
+            "payment_preferences": "Credit Card"
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 1,
+        "fields": {
+            "name": "MacBook Pro",
+            "description": "The latest MacBook Pro with M2 chip.",
+            "price": "1999.99",
+            "image": "images/new_arrivals.png",
+            "is_featured": true,
+            "category": "New Arrivals"
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 2,
+        "fields": {
+            "name": "iPhone 15 Pro",
+            "description": "Experience cutting-edge technology.",
+            "price": "1099.99",
+            "image": "images/bestsellers.png",
+            "is_featured": false,
+            "category": "Bestsellers"
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 3,
+        "fields": {
+            "name": "Xbox Series X",
+            "description": "Power your dreams with the latest gaming console.",
+            "price": "499.99",
+            "image": "images/discounts.png",
+            "is_featured": false,
+            "category": "Limited Time Discounts"
+        }
+    },
+    {
+        "model": "core.product",
+        "pk": 4,
+        "fields": {
+            "name": "Bose QuietComfort Earbuds",
+            "description": "Noise-cancelling earbuds with premium sound.",
+            "price": "279.99",
+            "image": "images/exclusive_deals.png",
+            "is_featured": true,
+            "category": "Exclusive Deals"
+        }
+    },
+    {
+        "model": "core.order",
+        "pk": 1,
+        "fields": {
+            "customer": 1,
+            "product": 1,
+            "status": "Delivered",
+            "order_date": "2024-12-01"
+        }
+    },
+    {
+        "model": "core.order",
+        "pk": 2,
+        "fields": {
+            "customer": 1,
+            "product": 2,
+            "status": "In Process",
+            "order_date": "2024-12-02"
+        }
+    },
+    {
+        "model": "core.delivery",
+        "pk": 1,
+        "fields": {
+            "order": 1,
+            "tracking_number": "T123456789",
+            "status": "Delivered",
+            "estimated_delivery_date": "2024-12-05",
+            "delivery_date": "2024-12-03",
+            "address": "123 Main St, Anytown, USA"
+        }
+    },
+    {
+        "model": "core.delivery",
+        "pk": 2,
+        "fields": {
+            "order": 2,
+            "tracking_number": "T987654321",
+            "status": "In Transit",
+            "estimated_delivery_date": "2024-12-06",
+            "delivery_date": null,
+            "address": "123 Main St, Anytown, USA"
+        }
+    }
+]

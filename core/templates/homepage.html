@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneOne - Homepage</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <style>
+        .navbar-brand img {
+        height: 150px; /* Adjust this value to fit your design */
+        margin-right: 5px;
+    }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        .hero-section {
+            background-color: #f9f9f9;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .hero-section img {
+        width: 100%; /* Ensures the banner spans the full width of the screen */
+        max-height: 120px; /* Adjust based on how tall you want the banner */
+        object-fit: cover; /* Keeps the image proportional */
+    }
+        .hero-section h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .product-categories {
+            margin: 40px 0;
+            text-align: center; /* Ensures all content in this section is centered */
+        }
+        .product-categories .row {
+            justify-content: center; /* Centers the row content */
+        }
+        .card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 40px; /* Adds spacing between the cards */
+        }
+        footer {
+            margin-top: 50px;
+            padding: 20px 0;
+            background: #f8f9fa;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'images/logo.png' %}" alt="OneOne Logo" height="50">
+            </a>            
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a href="#" class="nav-link">Welcome, John</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Order Tracking</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Support</a></li>
+                <li class="nav-item"><bold><a href="dashboard" class="nav-link">View Dashboard</a></bold></li>
+                <li class="nav-item"><a href="#" class="btn btn-warning">Basket (0)</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="hero-section">
+            <img src="{% static 'images/black_friday.png' %}" alt="Black Friday" class="img-fluid mb-4">
+            <h1>Delivering Electronics at Your Doorstep</h1>
+            <button class="btn btn-warning btn-lg">Shop Now</button>
+        </div>
+        <div class="container product-categories">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-3 text-center">
+                    <h3>New Arrivals</h3>
+                    <div class="card">
+                        <img src="{% static 'images/new_arrivals.png' %}" class="card-img-top" alt="New Arrivals">
+                        <div class="card-body">
+                            <a href="#" class="btn btn-warning">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <h3>Bestsellers of the Week</h3>
+                    <div class="card">
+                        <img src="{% static 'images/bestsellers.png' %}" class="card-img-top" alt="Bestsellers">
+                        <div class="card-body">
+                            <a href="#" class="btn btn-warning">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <h3>Limited Time Discounts</h3>
+                    <div class="card">
+                        <img src="{% static 'images/discounts.png' %}" class="card-img-top" alt="Discounts">
+                        <div class="card-body">
+                            <a href="#" class="btn btn-warning">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <h3>Exclusive Deals</h3>
+                    <div class="card">
+                        <img src="{% static 'images/exclusive_deals.png' %}" class="card-img-top" alt="Exclusive Deals">
+                        <div class="card-body">
+                            <a href="#" class="btn btn-warning">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Terms and ConditionsㅤㅤㅤㅤㅤㅤㅤPrivacy PolicyㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤContact Us</p>
+        <p>&copy; 2024 OneOne</p>
+    </footer>
+</body>
+</html>

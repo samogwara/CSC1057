@@ -1,0 +1,57 @@
+[
+    {
+      "model": "core.product",
+      "pk": 1,
+      "fields": {
+        "name": "Wireless Headphones",
+        "description": "High-quality wireless headphones with noise-cancellation.",
+        "price": "99.99",
+        "image": "products/headphones.jpg",
+        "is_featured": true,
+        "category": "New Arrivals"
+      }
+    },
+    {
+      "model": "core.product",
+      "pk": 2,
+      "fields": {
+        "name": "Smartphone",
+        "description": "Latest model with cutting-edge technology.",
+        "price": "799.99",
+        "image": "products/smartphone.jpg",
+        "is_featured": false,
+        "category": "Bestsellers"
+      }
+    },
+    {
+      "model": "core.customer",
+      "pk": 1,
+      "fields": {
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "address": "123 Main St, Anytown, USA",
+        "payment_preferences": "Credit Card"
+      }
+    },
+    {
+      "model": "core.order",
+      "pk": 1,
+      "fields": {
+        "customer": 1,
+        "product": 1,
+        "status": "Delivered",
+        "order_date": "2024-12-01"
+      }
+    },
+    {
+      "model": "core.order",
+      "pk": 2,
+      "fields": {
+        "customer": 1,
+        "product": 2,
+        "status": "Pending",
+        "order_date": "2024-12-02"
+      }
+    }
+  ]
+  

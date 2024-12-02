@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneOne - Order Tracking</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">OneOne</a>
+        </nav>
+    </header>
+    <main>
+        <div class="container mt-4">
+            <h2>Order Tracking</h2>
+            <h4>Order ID: {{ order.id }}</h4>
+            <p>Status: {{ order.status }}</p>
+            <p>Product: {{ order.product.name }}</p>
+        </div>
+    </main>
+</body>
+</html>
